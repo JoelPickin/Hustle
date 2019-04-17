@@ -4,6 +4,12 @@ using Hustle.ViewModels;
 using Hustle.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Hustle.Views.Navigation;
+using Hustle.Views.Overview;
+using Hustle.ViewModels.Navigation;
+using Hustle.ViewModels.Overview;
+using Hustle.Views.Accounts;
+using Hustle.ViewModels.Accounts;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Hustle
@@ -30,6 +36,11 @@ namespace Hustle
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabbedNavPage, TabbedNavPageViewModel>();
+            containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
+            containerRegistry.RegisterForNavigation<OverviewPage, OverviewPageViewModel>();
+            containerRegistry.RegisterForNavigation<CreateAccountPage, CreateAccountPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewAccountPage, ViewAccountPageViewModel>();
         }
     }
 }

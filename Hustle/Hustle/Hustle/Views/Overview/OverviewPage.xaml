@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Hustle.Views.Overview.OverviewPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid VerticalOptions="Center" Padding="10, 10, 10, 10" Grid.Row="0" BackgroundColor="#432973">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView Color="HotPink" 
+                       Grid.Row="0" 
+                       Grid.Column="0" 
+                       Grid.RowSpan="3" 
+                       Grid.ColumnSpan="3"/>
+
+            <BoxView Color="Red" Grid.Row="0" Grid.Column="4"/>
+
+            <StackLayout Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="4">
+                <ProgressBar ProgressColor="Red" Progress="1" />
+                <Label Text="50/50" HorizontalOptions="Start"/>
+                <Label Text="Health" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <BoxView Color="Gold"  Grid.Row="1" Grid.Column="4"/>
+
+            <StackLayout Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="4">
+                <ProgressBar ProgressColor="Gold" Progress="1"/>
+                <Label Text="50/50" HorizontalOptions="Start"/>
+                <Label Text="Experience" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="Lvl 1" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="7">
+                <BoxView Color="Gold" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="10" HeightRequest="10"/>
+                <Label Text="0" HorizontalOptions="End" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="8">
+                <BoxView Color="Green" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="10" HeightRequest="10"/>
+                <Label Text="0" HorizontalOptions="End" VerticalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+        <StackLayout Grid.Row="1">
+            <Button Command="{Binding GoToAccountPageCommand}" Text="Create Account"></Button>
+            <ListView>
+
+            </ListView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

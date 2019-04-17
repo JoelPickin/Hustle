@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Hustle.Views.Accounts.CreateAccountPage">
+    <StackLayout>
+        <StackLayout>
+            <Label Text="Goal Name"/>
+            <Entry Text="{Binding GoalName}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Notes"/>
+            <Editor Text="{Binding Notes}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Goal Amount"/>
+            <Entry Text="{Binding GoalValue}"/>
+        </StackLayout>
+        <Button Text="Create Goal" Command="{Binding CreateGoalCommand}"/>
+    </StackLayout>
+</ContentPage>
